@@ -1,14 +1,27 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "hall.h"
 
-#define N 5000
+int main(int *argc,char **argv){
 
-int main(){
+    heap_init(4096);
 
-    int a = (N + 4096 - 1) & ~(4096 - 1);
-    size_t b = (0.25 * a);
-    int c = (0.75 * a);
-    printf("%d\n",b);
-    printf("%d\n",c);
+    char *a1 = alloc(64);
+    char *a2 = alloc(72);
+
+    a1[0] = 'a';
+    a1[1] = 'b';
+
+    a2[0] = 'c';
+    a2[1] = 'd';
+
+    printf("%c\n",a1[0]);
+    printf("%c\n",a2[1]);
+    printf("%d\n",atoi(argv[1]));
+
+    freec(a1);
+    freec(a2);
+    freeh();
 
     return 0;
 }

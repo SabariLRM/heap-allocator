@@ -2,7 +2,7 @@
 .PHONY: FORCE
 
 %.c: FORCE
-	gcc $@ -o $*
+	gcc $@ hall.c -o $*
 	./$* $(filter-out $@,$(MAKECMDGOALS))
 	rm -f $*
 

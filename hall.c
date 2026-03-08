@@ -3,7 +3,6 @@
 #include <unistd.h>
 #include <stdbool.h>
 
-#define N 4096
 #define Chu 32
 
 struct Chunk {
@@ -131,8 +130,7 @@ void freec(char* p){
 }
 
 
-int main(){
-    
+void heap_init(size_t N){
     
     size_t p = (N + 4096 - 1) & ~(4096 - 1);
 
@@ -145,17 +143,4 @@ int main(){
     heap.size = p;
     meta = (0.25 * heap.size);
     totchu = (0.75 * heap.size);
-    char* a1 = alloc(64);
-    printf("a1: %p\n",a1);
-    char* a2 = alloc(32);
-    printf("a2: %p\n",a2);
-    a1[0] = 'a';
-    printf("a1 char: %c\n",a1[0]);
-    freec(a1);
-    char* a3 = alloc(32);
-    printf("a3: %p\n",a3);
-    a3[0] = 'b';
-    printf("a3 char: %c\n",a3[0]);
-
-    return 0;
 }
