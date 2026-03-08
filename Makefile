@@ -2,7 +2,7 @@
 .PHONY: FORCE
 
 %.c: FORCE
-	gcc $@ hall.c -o $*
+	gcc $@ my_alloc.c -o $*
 	./$* $(filter-out $@,$(MAKECMDGOALS))
 	rm -f $*
 

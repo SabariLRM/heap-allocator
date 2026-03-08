@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "hall.h"
+#include "my_alloc.h"
 
 int main(int *argc,char **argv){
 

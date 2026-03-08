@@ -1,5 +1,5 @@
-#ifndef MAL_H
-#define MAL_H
+#ifndef MY_ALLOC_H
+#define MY_ALLOC_H
 
 #include <stddef.h>
 
